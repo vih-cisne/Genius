@@ -1,0 +1,134 @@
+body {
+    background-color: rgb(48, 179, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+header {
+    width: 100vw;
+    height: 5vh;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header>img {
+    margin-left: 20px;
+    height: 100px;
+    width: 200px;
+}
+
+#circle {
+    margin-top: 70px;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+}
+
+#blue {
+    height: 120px;
+    width: 120px;
+    background-color: rgb(16, 86, 143);
+    border-top-left-radius: 100%;
+    position: absolute;
+    clip: circle(0px,120px,120px,0px);
+    top: 15px;
+    left: 20px;
+}
+
+/*#blue:hover {
+    filter: drop-shadow(0 0 10px rgb(4, 88, 185));
+}
+*/
+#red {
+    height: 120px;
+    width: 120px;
+    background-color: red;
+    border-top-right-radius: 100%;
+    position: absolute;
+    clip: circle(0px,120px,120px,0px);
+    top: 15px;
+    left: 160px;
+}
+
+#yellow {
+    height: 120px;
+    width: 120px;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+    position: absolute;
+    top: 160px;
+    left: 20px;
+}
+
+#green {
+    height: 120px;
+    width: 120px;
+    background-color: green;
+    border-bottom-right-radius: 100%;
+    position: absolute;
+    top: 160px;
+    left: 160px;
+}
+
+#middle {
+    height: 120px;
+    width: 120px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 87px;
+    left: 90px;
+    z-index: 2;
+}
+
+@media (min-width:700px) {
+    header {
+        height: 0px;
+    }
+    #circle {
+        margin: 0px;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        position: relative;
+    }
+    
+    #blue {
+        height: 280px;
+        width: 280px;
+        top: 15px;
+        left: 15px;
+    }
+    
+    #red {
+        height: 280px;
+        width: 280px;
+        top: 15px;
+        left: 300px;
+    }
+    
+    #yellow {
+        height: 280px;
+        width: 280px;
+        top: 300px;
+        left: 15px;
+    }
+    
+    #green {
+        height: 280px;
+        width: 280px;
+        top: 300px;
+        left: 300px;
+    }
+    
+    #middle {
+        height: 280px;
+        width: 280px;
+        top: 155px;
+        left: 155px;
+    }
+}

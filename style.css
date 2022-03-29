@@ -1,3 +1,4 @@
+@import url("fonts.googleapis.com/css2?family=Smokum&display=swap");
 body {
     background-image: url(img/Central_Park_Zoo.webp);
     background-repeat:no-repeat;
@@ -8,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0px;
+   
 }
 header {
     width: 100vw;
@@ -41,15 +43,17 @@ header>img {
     clip: circle(0px,120px,120px,0px);
     top: 15px;
     left: 20px;
+    cursor: pointer;
+}
+#blue:hover{
+    filter: drop-shadow(0 0 10px rgb(54, 140, 238));
 }
 
 .blue--active {
     filter: drop-shadow(0 0 10px rgb(54, 140, 238));
-    cursor: pointer;
     filter: brightness(2);
 
 }
-
 #red {
     height: 120px;
     width: 120px;
@@ -59,14 +63,16 @@ header>img {
     clip: circle(0px,120px,120px,0px);
     top: 15px;
     left: 160px;
+    cursor: pointer;
+}
+#red:hover{
+    filter: drop-shadow(0 0 10px rgb(255, 5, 5));
 }
 .red--active{
     filter: drop-shadow(0 0 10px rgb(185, 4, 4));
-    cursor: pointer;
     filter: brightness(2);
 
 }
-
 #yellow {
     height: 120px;
     width: 120px;
@@ -75,14 +81,16 @@ header>img {
     position: absolute;
     top: 160px;
     left: 20px;
+    cursor: pointer;
+}
+#yellow:hover{
+    filter: drop-shadow(0 0 10px rgb(205, 240, 11));
 }
 .yellow--active{
     filter: drop-shadow(0 0 10px rgb(205, 240, 11));
-    cursor: pointer;
     filter: brightness(2);
 
 }
-
 #green {
     height: 120px;
     width: 120px;
@@ -91,10 +99,13 @@ header>img {
     position: absolute;
     top: 160px;
     left: 160px;
+    cursor: pointer;
+}
+#green:hover{
+    filter: drop-shadow(0 0 10px rgb(10, 185, 4));
 }
 .green--active{
     filter: drop-shadow(0 0 10px rgb(10, 185, 4));
-    cursor: pointer;
     filter: brightness(2);
 }
 
@@ -113,6 +124,7 @@ header>img {
     text-align: center;
     justify-content: center;
     line-height: 2px;
+    font-family: 'Smokum', cursive;
 }
 
 button{
@@ -121,6 +133,7 @@ button{
     height: 25px;
     font-size: 15px;
     border-radius: 50%;
+    font-family: 'Smokum', cursive;
 }
 
 button:hover{

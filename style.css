@@ -160,26 +160,33 @@ p{
 }
 /*
 #recruta{
-    width: 40%;
-    padding-left: 30%;
+    width: 30%;
+    padding-left: 32%;
     padding-top: 21%;
 }
 
 #kowalski{
-    width: 35%;
-    padding-left: 33%;
-    padding-top: 17%;
+    width: 25%;
+    padding-left: 40%;
+    padding-top: 22%;
 }
 
 #capitao{
-    width: 45%;
+    width: 35%;
     padding-left: 35%;
+    padding-top: 15%;
 }
 
 #rico{
+
     width: 40%;
     padding-left: 27%;
 }*/
+    width: 30%;
+    padding-left: 35%;
+    padding-top: 15%;
+}
+
 
 @media (min-width:700px) {
     header {

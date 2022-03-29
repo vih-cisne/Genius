@@ -39,7 +39,7 @@ header>img {
     left: 20px;
 }
 
-#blue:hover {
+.blue--active {
     filter: drop-shadow(0 0 10px rgb(54, 140, 238));
     cursor: pointer;
 }
@@ -54,7 +54,7 @@ header>img {
     top: 15px;
     left: 160px;
 }
-#red:hover{
+.red--active{
     filter: drop-shadow(0 0 10px rgb(185, 4, 4));
     cursor: pointer;
 }
@@ -68,7 +68,7 @@ header>img {
     top: 160px;
     left: 20px;
 }
-#yellow:hover{
+.yellow--active{
     filter: drop-shadow(0 0 10px rgb(205, 240, 11));
     cursor: pointer;
 }
@@ -82,7 +82,7 @@ header>img {
     top: 160px;
     left: 160px;
 }
-#green:hover{
+.green--active{
     filter: drop-shadow(0 0 10px rgb(10, 185, 4));
     cursor: pointer;
 }

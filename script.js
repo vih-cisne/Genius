@@ -63,17 +63,31 @@ function deleteColors(element) {
 const circle=document.getElementById('circle')
 let count=0
 circle.addEventListener('click',function(event) {
-    if (event.target.id=='blue' || event.target.id=='red' || event.target.id=='green' || event.target.id=='yellow') {
-        /*console.log(sequence)
-        console.log(sequence[count])*/
-        if (event.target.id==sequence[count]) {
+    if (event.target.id=='blue' || event.target.id=='recruta' ||event.target.id=='red' || event.target.id=='kowalski' || event.target.id=='green' || event.target.id=='capitao' || event.target.id=='yellow' || event.target.id=='rico') {
+        let color=event.target.id
+        switch (color){
+            case 'recruta':
+            color='blue'
+            break;
+            case 'kowalski':
+            color='red'
+            break;
+            case 'capitao':
+            color='yellow'
+            break;
+            case 'rico':
+            color='green'
+        }
+        document.getElementById(color).classList.add(color+'--active')
+        deleteColors(color)
+        if (color==sequence[count]) {
             middle.innerHTML=''
         } else {
             middle.innerHTML=`<p>Não foi dessa vez!</p><p>Maior pontuação: ${sequence.length-1}</p><button id="again">Reload</button>`
             reloadPage()
         }
         count++
-        if(count==sequence.length && event.target.id==sequence[count-1]) {
+        if(count==sequence.length && color==sequence[count-1]) {
             middle.innerHTML='<p>Muito bem! aguarde a próxima sequência</p>'
             count=0
             getSequence()

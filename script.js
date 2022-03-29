@@ -39,11 +39,7 @@ function showSequence() {
             return;
        }
      }
-    , 800)
-}
-
-function deleteColors(element) {
-        setTimeout(() => {document.getElementById(element).classList.remove(element+'--active')}, 800)
+    , 1000)
 }
 
 const start=document.querySelector('#start')
@@ -51,4 +47,8 @@ start.addEventListener('click',function() {
     getSequence()
     showSequence()
 })
+
+function deleteColors(element) {
+    setTimeout(() => {document.getElementById(element).classList.remove(element+'--active')}, 500)
+}
 

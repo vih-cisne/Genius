@@ -125,7 +125,6 @@ header>img {
     justify-content: center;
     line-height: 2px;
     font-family: 'Smokum', cursive;
-    
 }
 
 button{
@@ -136,10 +135,12 @@ button{
     border-radius: 50%;
     font-family: 'Smokum', cursive;
 }
+
 button:hover{
     cursor: pointer;
     font-weight: bolder;
 }
+
 p{
     color: white;
     font-size: large;
@@ -147,7 +148,58 @@ p{
     font-weight: bolder;
     font-size: 11px;
     width: 100px;
+    line-height: normal;
+    margin-top: 12px;
 }
+#recruta{
+    width: 30%;
+    padding-left: 32%;
+    padding-top: 21%;
+}
+#kowalski{
+    width: 25%;
+    padding-left: 40%;
+    padding-top: 22%;
+}
+#capitao{
+    width: 35%;
+    padding-left: 35%;
+    padding-top: 15%;
+}
+#rico{
+    width: 30%;
+    padding-left: 35%;
+    padding-top: 15%;
+}
+/*
+#recruta{
+    width: 30%;
+    padding-left: 32%;
+    padding-top: 21%;
+}
+
+#kowalski{
+    width: 25%;
+    padding-left: 40%;
+    padding-top: 22%;
+}
+
+#capitao{
+    width: 35%;
+    padding-left: 35%;
+    padding-top: 15%;
+}
+
+#rico{
+
+    width: 40%;
+    padding-left: 27%;
+}*/
+    width: 30%;
+    padding-left: 35%;
+    padding-top: 15%;
+}
+
 
 @media (min-width:700px) {
     header {
@@ -157,14 +209,16 @@ p{
     p {
         font-size: large;
         width: 250px;
-        margin-top: 100px;
+        margin: 20px;
     }
+
     button {
     width: 100px;
     height: 50px;
     font-size: x-large;
     border-radius: 50%;
     }
+
     #circle {
         margin: 0px;
         width: 600px;
@@ -210,32 +264,7 @@ p{
     }
 }
 
-button{
-    position: relative;
-    top: -400px;
-    z-index: 4;
-    background-color: rgb(3, 149, 207);
-    width: 100px;
-    height: 100px;
-    font-size: x-large;
-    border-radius: 50%;
-}
-button:hover{
-    cursor: pointer;
-    font-weight: bolder;
-    filter: brightness(2);
-}
-p{
-    color: white;
-    font-size: large;
-    position: relative;
-    top: -400px;
-    z-index: 4;
-    width: 100px;
-    text-align: center;
-    font-weight: bolder;
-   
-}
+
 
 
 

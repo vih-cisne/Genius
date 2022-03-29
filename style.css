@@ -39,10 +39,11 @@ header>img {
     left: 20px;
 }
 
-/*#blue:hover {
-    filter: drop-shadow(0 0 10px rgb(4, 88, 185));
+#blue:hover {
+    filter: drop-shadow(0 0 10px rgb(54, 140, 238));
+    cursor: pointer;
 }
-*/
+
 #red {
     height: 120px;
     width: 120px;
@@ -52,6 +53,10 @@ header>img {
     clip: circle(0px,120px,120px,0px);
     top: 15px;
     left: 160px;
+}
+#red:hover{
+    filter: drop-shadow(0 0 10px rgb(185, 4, 4));
+    cursor: pointer;
 }
 
 #yellow {
@@ -63,6 +68,10 @@ header>img {
     top: 160px;
     left: 20px;
 }
+#yellow:hover{
+    filter: drop-shadow(0 0 10px rgb(205, 240, 11));
+    cursor: pointer;
+}
 
 #green {
     height: 120px;
@@ -72,6 +81,10 @@ header>img {
     position: absolute;
     top: 160px;
     left: 160px;
+}
+#green:hover{
+    filter: drop-shadow(0 0 10px rgb(10, 185, 4));
+    cursor: pointer;
 }
 
 #middle {
@@ -132,3 +145,32 @@ header>img {
         left: 155px;
     }
 }
+button{
+    position: relative;
+    top: -400px;
+    z-index: 4;
+    background-color: rgb(48, 179, 231);
+    width: 100px;
+    height: 100px;
+    font-size: x-large;
+    border-radius: 50%;
+}
+button:hover{
+    cursor: pointer;
+    font-weight: bolder;
+}
+p{
+    color: white;
+    font-size: large;
+    position: relative;
+    top: -400px;
+    z-index: 4;
+    width: 100px;
+    text-align: center;
+    font-weight: bolder;
+   
+}
+
+
+
+

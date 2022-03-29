@@ -4,38 +4,51 @@ function getRandom() {
     return Math.floor(Math.random() * (4)) + 1;
 }
 
-const sequency=[]
+const sequence=[]
 
-function getSequency() {
-    sequency.push(getRandom())
-    console.log(sequency)
+function getSequence() {
+    let color=getRandom()
+
+    switch (color){
+        case 1:
+        color='blue'
+        break;
+        case 2:
+        color='red'
+        break;
+        case 3:
+        color='yellow'
+        break;
+        case 4:
+        color='green'
+        break;
+    }
+    sequence.push(color)
+    console.log(sequence)
 }
 
-function showSequency() {
-    sequency.forEach(element => {
-        switch (element){
-            case 1:
-            document.getElementById('blue').style.filter='drop-shadow(0 0 10px rgb(54, 140, 238))'
-            setTimeout(() => {document.getElementById('blue').style.filter='none'}, 1000)
-            break;
-            case 2:
-            document.getElementById('red').style.filter='drop-shadow(0 0 10px rgb(54, 140, 238))'
-            setTimeout(() => {document.getElementById('red').style.filter='none'}, 1000)
-            break;
-            case 3:
-            document.getElementById('yellow').style.filter='drop-shadow(0 0 10px rgb(54, 140, 238))'
-            setTimeout(() => {document.getElementById('yellow').style.filter='none'}, 1000)
-            break;
-            case 4:
-            document.getElementById('green').style.filter='drop-shadow(0 0 10px rgb(54, 140, 238))'
-            setTimeout(() => {document.getElementById('green').style.filter='none'}, 1000)
-            break;
-        }
-    })
+function showSequence() {
+    let i=0
+    const intervalo=setInterval(
+     function() {
+       document.getElementById(sequence[i]).classList.add(sequence[i]+'--active')
+       deleteColors(sequence[i])
+       i++
+       if(i==sequence.length) {
+           clearInterval(intervalo)
+            return;
+       }
+     }
+    , 800)
+}
+
+function deleteColors(element) {
+        setTimeout(() => {document.getElementById(element).classList.remove(element+'--active')}, 800)
 }
 
 const start=document.querySelector('#start')
 start.addEventListener('click',function() {
-    getSequency()
-    showSequency()
+    getSequence()
+    showSequence()
 })
+

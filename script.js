@@ -67,9 +67,27 @@ circle.addEventListener('click',function(event) {
         /*console.log(sequence)
         console.log(sequence[count])*/
         if (event.target.id==sequence[count]) {
-            console.log('correto!')
+            middle.innerHTML='<p>Correto!</p>'
+        } else {
+            middle.innerHTML='<p>Tente novamente</p><button id="again">Reload</button>'
+            reloadPage()
         }
         count++
+        if(count==sequence.length && event.target.id==sequence[count-1]) {
+            middle.innerHTML='<p>Muito bem! aguarde a próxima sequência</p>'
+            count=0
+            getSequence()
+            showSequence()
+        }
     }
 })
+
+function reloadPage() {
+    const again=document.getElementById('again')
+    again.addEventListener('click',function() {
+    window.location.reload()
+}) 
+}
+
+
 

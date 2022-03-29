@@ -138,7 +138,27 @@ p{
     line-height: normal;
     margin-top: 12px;
 }
-
+#recruta{
+    width: 30%;
+    padding-left: 32%;
+    padding-top: 21%;
+}
+#kowalski{
+    width: 25%;
+    padding-left: 40%;
+    padding-top: 22%;
+}
+#capitao{
+    width: 35%;
+    padding-left: 35%;
+    padding-top: 15%;
+}
+#rico{
+    width: 30%;
+    padding-left: 35%;
+    padding-top: 15%;
+}
+/*
 #recruta{
     width: 40%;
     padding-left: 30%;
@@ -159,7 +179,7 @@ p{
 #rico{
     width: 40%;
     padding-left: 27%;
-}
+}*/
 
 @media (min-width:700px) {
     header {

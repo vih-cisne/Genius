@@ -69,7 +69,7 @@ circle.addEventListener('click',function(event) {
         if (event.target.id==sequence[count]) {
             middle.innerHTML=''
         } else {
-            middle.innerHTML='<p>Tente novamente</p><button id="again">Reload</button>'
+            middle.innerHTML=`<p>Não foi dessa vez!</p><p>Maior pontuação: ${sequence.length-1}</p><button id="again">Reload</button>`
             reloadPage()
         }
         count++

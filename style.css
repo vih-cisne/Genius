@@ -42,12 +42,14 @@ header>img {
 .blue--active {
     filter: drop-shadow(0 0 10px rgb(54, 140, 238));
     cursor: pointer;
+    filter: brightness(2);
+
 }
 
 #red {
     height: 120px;
     width: 120px;
-    background-color: red;
+    background-color: rgb(165, 1, 1);
     border-top-right-radius: 100%;
     position: absolute;
     clip: circle(0px,120px,120px,0px);
@@ -57,12 +59,14 @@ header>img {
 .red--active{
     filter: drop-shadow(0 0 10px rgb(185, 4, 4));
     cursor: pointer;
+    filter: brightness(2);
+
 }
 
 #yellow {
     height: 120px;
     width: 120px;
-    background-color: yellow;
+    background-color: rgb(177, 177, 3);
     border-bottom-left-radius: 100%;
     position: absolute;
     top: 160px;
@@ -71,6 +75,8 @@ header>img {
 .yellow--active{
     filter: drop-shadow(0 0 10px rgb(205, 240, 11));
     cursor: pointer;
+    filter: brightness(2);
+
 }
 
 #green {
@@ -85,6 +91,7 @@ header>img {
 .green--active{
     filter: drop-shadow(0 0 10px rgb(10, 185, 4));
     cursor: pointer;
+    filter: brightness(2);
 }
 
 #middle {
@@ -181,6 +188,32 @@ p{
     }
 }
 
+button{
+    position: relative;
+    top: -400px;
+    z-index: 4;
+    background-color: rgb(3, 149, 207);
+    width: 100px;
+    height: 100px;
+    font-size: x-large;
+    border-radius: 50%;
+}
+button:hover{
+    cursor: pointer;
+    font-weight: bolder;
+    filter: brightness(2);
+}
+p{
+    color: white;
+    font-size: large;
+    position: relative;
+    top: -400px;
+    z-index: 4;
+    width: 100px;
+    text-align: center;
+    font-weight: bolder;
+   
+}
 
 
 

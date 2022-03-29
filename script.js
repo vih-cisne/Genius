@@ -24,8 +24,9 @@ function getSequence() {
         break;
     }
     sequence.push(color)
-    console.log(sequence)
 }
+const middle=document.getElementById('middle')
+
 
 function showSequence() {
     let i=0
@@ -35,6 +36,7 @@ function showSequence() {
        deleteColors(sequence[i])
        i++
        if(i==sequence.length) {
+           middle.innerHTML='<p>Agora,clique nas cores na mesma ordem</p>'
            clearInterval(intervalo)
             return;
        }
@@ -46,9 +48,28 @@ const start=document.querySelector('#start')
 start.addEventListener('click',function() {
     getSequence()
     showSequence()
+    middle.removeChild(start)
+    changeInstrution(start)
 })
+
+function changeInstrution() {
+    middle.innerHTML='<p>Memorize a sequência</p>'
+}
 
 function deleteColors(element) {
     setTimeout(() => {document.getElementById(element).classList.remove(element+'--active')}, 500)
 }
+
+const circle=document.getElementById('circle')
+let count=0
+circle.addEventListener('click',function(event) {
+    if (event.target.id=='blue' || event.target.id=='red' || event.target.id=='green' || event.target.id=='yellow') {
+        /*console.log(sequence)
+        console.log(sequence[count])*/
+        if (event.target.id==sequence[count]) {
+            console.log('correto!')
+        }
+        count++
+    }
+})
 

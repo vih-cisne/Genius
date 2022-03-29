@@ -39,7 +39,7 @@ header>img {
     left: 20px;
 }
 
-#blue:hover {
+.blue--active {
     filter: drop-shadow(0 0 10px rgb(54, 140, 238));
     cursor: pointer;
     filter: brightness(2);
@@ -56,7 +56,7 @@ header>img {
     top: 15px;
     left: 160px;
 }
-#red:hover{
+.red--active{
     filter: drop-shadow(0 0 10px rgb(185, 4, 4));
     cursor: pointer;
     filter: brightness(2);
@@ -72,7 +72,7 @@ header>img {
     top: 160px;
     left: 20px;
 }
-#yellow:hover{
+.yellow--active{
     filter: drop-shadow(0 0 10px rgb(205, 240, 11));
     cursor: pointer;
     filter: brightness(2);
@@ -88,7 +88,7 @@ header>img {
     top: 160px;
     left: 160px;
 }
-#green:hover{
+.green--active{
     filter: drop-shadow(0 0 10px rgb(10, 185, 4));
     cursor: pointer;
     filter: brightness(2);
@@ -103,11 +103,45 @@ header>img {
     top: 87px;
     left: 90px;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    background-color: rgb(48, 179, 231);
+    width: 65px;
+    height: 25px;
+    font-size: 15px;
+    border-radius: 50%;
+}
+button:hover{
+    cursor: pointer;
+    font-weight: bolder;
+}
+p{
+    color: white;
+    font-size: large;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 11px;
+    width: 100px;
 }
 
 @media (min-width:700px) {
     header {
         height: 0px;
+    }
+
+    p {
+        font-size: large;
+        width: 250px;
+        margin-top: 100px;
+    }
+    button {
+    width: 100px;
+    height: 50px;
+    font-size: x-large;
+    border-radius: 50%;
     }
     #circle {
         margin: 0px;
@@ -150,8 +184,10 @@ header>img {
         width: 280px;
         top: 155px;
         left: 155px;
+        align-content: center;
     }
 }
+
 button{
     position: relative;
     top: -400px;

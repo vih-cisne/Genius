@@ -83,7 +83,11 @@ circle.addEventListener('click',function(event) {
         if (color==sequence[count]) {
             middle.innerHTML=''
         } else {
-            middle.innerHTML=`<p>Não foi dessa vez!</p><p>Maior pontuação: ${sequence.length-1}</p><button id="again">Reload</button>`
+            let pontuacao=sequence.length-1
+            if (pontuacao==-1) {
+                pontuacao=0
+            }
+            middle.innerHTML=`<p>Não foi dessa vez!</p><p>Maior pontuação: ${pontuacao}</p><button id="again">Reload</button>`
             reloadPage()
         }
         count++

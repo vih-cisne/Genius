@@ -67,7 +67,7 @@ circle.addEventListener('click',function(event) {
         /*console.log(sequence)
         console.log(sequence[count])*/
         if (event.target.id==sequence[count]) {
-            middle.innerHTML='<p>Correto!</p>'
+            middle.innerHTML=''
         } else {
             middle.innerHTML='<p>Tente novamente</p><button id="again">Reload</button>'
             reloadPage()

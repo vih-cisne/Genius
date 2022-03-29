@@ -1,5 +1,9 @@
 body {
-    background-color: rgb(48, 179, 231);
+    background-image: url(img/Central_Park_Zoo.webp);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,15 +104,17 @@ header>img {
     background-color: black;
     border-radius: 50%;
     position: absolute;
-    top: 87px;
-    left: 90px;
+    top: 30%;
+    left: 30%;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     line-height: 2px;
 }
+
 button{
     background-color: rgb(48, 179, 231);
     width: 65px;
@@ -116,10 +122,12 @@ button{
     font-size: 15px;
     border-radius: 50%;
 }
+
 button:hover{
     cursor: pointer;
     font-weight: bolder;
 }
+
 p{
     color: white;
     font-size: large;
@@ -129,6 +137,28 @@ p{
     width: 100px;
     line-height: normal;
     margin-top: 12px;
+}
+
+#recruta{
+    width: 40%;
+    padding-left: 30%;
+    padding-top: 21%;
+}
+
+#kowalski{
+    width: 35%;
+    padding-left: 33%;
+    padding-top: 17%;
+}
+
+#capitao{
+    width: 45%;
+    padding-left: 35%;
+}
+
+#rico{
+    width: 40%;
+    padding-left: 27%;
 }
 
 @media (min-width:700px) {
@@ -141,12 +171,14 @@ p{
         width: 250px;
         margin: 20px;
     }
+
     button {
     width: 100px;
     height: 50px;
     font-size: x-large;
     border-radius: 50%;
     }
+
     #circle {
         margin: 0px;
         width: 600px;

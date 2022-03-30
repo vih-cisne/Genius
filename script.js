@@ -176,7 +176,7 @@ let colorSoundEffect = (color) => {
         if (audio.currentTime > 0.5) {
             setTimeout(() => {
                 audio.pause();
-            }, 400);
+            }, 300);
         }
     } else if ((color == 1) || (color == 'red')) {
         let audio = new Audio('./audio/audio_red.wav');
@@ -184,7 +184,7 @@ let colorSoundEffect = (color) => {
         if (audio.currentTime > 0.5) {
             setTimeout(() => {
                 audio.pause();
-            }, 400);
+            }, 300);
         }
     } else if ((color == 2) || (color == 'yellow')) {
         let audio = new Audio('./audio/audio_yellow.wav');
@@ -192,7 +192,7 @@ let colorSoundEffect = (color) => {
         if (audio.currentTime > 0.5) {
             setTimeout(() => {
                 audio.pause();
-            }, 400);
+            }, 300);
         }
     } else if ((color == 3) || (color == 'green')) {
         let audio = new Audio('./audio/audio_green.wav');
@@ -200,7 +200,7 @@ let colorSoundEffect = (color) => {
         if (audio.currentTime > 0.5) {
             setTimeout(() => {
                 audio.pause();
-            }, 400);
+            }, 300);
         }
     }
 }

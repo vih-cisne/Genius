@@ -1,5 +1,61 @@
 /*const cores=[{cor:'blue',id:1},{cor:'red',id:2},{cor:'yellow',id:3},{cor:'green',id:4},]*/
 
+let body = document.getElementsByTagName('body')[0]
+let header = document.createElement('header')
+let logo = document.createElement('img')
+    logo.src = 'img/The_Penguins_of_Madagascar_logo.png'
+    logo.alt = 'Logo Pinguins de Madagascar'
+    header.appendChild(logo)
+    body.appendChild(header)
+
+let circle_div = document.createElement('div')
+    circle_div.id = 'circle'
+    let blue = document.createElement('div')
+        blue.id = 'blue'
+    let recruta = document.createElement('img')
+        recruta.src = 'img/Recruta.png'
+        recruta.alt = 'Pinguim com gravata azul'
+        recruta.id = 'recruta'
+    let red = document.createElement('div')
+        red.id = 'red'
+    let kowalski = document.createElement('img')
+        kowalski.src = 'img/Kowalski.png'
+        kowalski.alt = 'Pinguim com gravata vermelha'
+        kowalski.id = 'kowalski'
+    let middle_div = document.createElement('div')
+        middle_div .id = 'middle'
+    let descricao = document.createElement('p')
+        descricao.innerText ='Memorize a sequência e depois clique nas cores na mesma ordem, preparado?'
+    let btn_start = document.createElement('button')
+        btn_start.innerText = 'INICIAR'
+        btn_start.id = 'start'
+    let yellow = document.createElement('div')
+        yellow.id = 'yellow'
+    let capitao = document.createElement('img')
+        capitao.src = 'img/Capitão.png'
+        capitao.alt = 'Pinguim com gravata amarela'
+        capitao.id = 'capitao'
+    let green = document.createElement('div')
+        green.id = 'green'
+    let rico = document.createElement('img')
+        rico.src = 'img/Rico.png'
+        rico.alt = 'Pinguim com gravata verde'
+        rico.id = 'rico'
+
+    blue.appendChild(recruta)
+    red.appendChild(kowalski)
+    middle_div.appendChild(btn_start)
+    yellow.appendChild(capitao)
+    green.appendChild(rico)
+    circle_div.appendChild(blue)
+    circle_div.appendChild(red)
+    circle_div.appendChild(middle_div)
+    circle_div.appendChild(yellow)
+    circle_div.appendChild(green)
+    body.appendChild(circle_div)
+    
+
+
 function getRandom() {
     return Math.floor(Math.random() * (4)) + 1;
 }
@@ -34,6 +90,7 @@ function showSequence() {
      function() {
        document.getElementById(sequence[i]).classList.add(sequence[i]+'--active')
        deleteColors(sequence[i])
+       colorSoundEffect(sequence[i])
        i++
        if(i==sequence.length) {
            middle.innerHTML='<p>Agora,clique nas cores na mesma ordem</p>'
@@ -79,6 +136,7 @@ circle.addEventListener('click',function(event) {
             color='green'
         }
         document.getElementById(color).classList.add(color+'--active')
+        colorSoundEffect(color)
         deleteColors(color)
         if (color==sequence[count]) {
             middle.innerHTML=''
@@ -87,7 +145,8 @@ circle.addEventListener('click',function(event) {
             if (pontuacao==-1) {
                 pontuacao=0
             }
-            middle.innerHTML=`<p>Não foi dessa vez!</p><p>Maior pontuação: ${pontuacao}</p><button id="again">Reload</button>`
+            middle.innerHTML=`<img src='img/nao_foi_dessa_vez.gif' id='gif_nao_foi'><p>Maior pontuação: ${pontuacao}</p><button id="again">Reload</button>`
+            errorSoundEffect()
             reloadPage()
         }
         count++
@@ -108,4 +167,46 @@ function reloadPage() {
 }
 
 
+
+
+let colorSoundEffect = (color) => {
+    if ((color == 0) || (color == 'blue')) {
+        let audio = new Audio('./audio/audio_blue.wav');
+        audio.play();
+        if (audio.currentTime > 0.5) {
+            setTimeout(() => {
+                audio.pause();
+            }, 400);
+        }
+    } else if ((color == 1) || (color == 'red')) {
+        let audio = new Audio('./audio/audio_red.wav');
+        audio.play();
+        if (audio.currentTime > 0.5) {
+            setTimeout(() => {
+                audio.pause();
+            }, 400);
+        }
+    } else if ((color == 2) || (color == 'yellow')) {
+        let audio = new Audio('./audio/audio_yellow.wav');
+        audio.play();
+        if (audio.currentTime > 0.5) {
+            setTimeout(() => {
+                audio.pause();
+            }, 400);
+        }
+    } else if ((color == 3) || (color == 'green')) {
+        let audio = new Audio('./audio/audio_green.wav');
+        audio.play();
+        if (audio.currentTime > 0.5) {
+            setTimeout(() => {
+                audio.pause();
+            }, 400);
+        }
+    }
+}
+
+let errorSoundEffect = () => {
+    let audio = new Audio('./audio/audio_error.wav');
+    audio.play();
+}
 

@@ -17,6 +17,30 @@ header {
     justify-content: space-between;
 }
 
+#modal {
+    background-color: aquamarine;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 3;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#info>p {
+    color: black;
+    width: 100%;
+    font-size: 20px;
+}
+
+#modal>img {
+    height: 100px;
+}
+
+
 header>img {
     margin-left: 20px;
     height: 100px;
@@ -226,6 +250,26 @@ p{
         left: 155px;
         align-content: center;
     }
+
+    #modal {
+        height: 400px;
+        width: 400px;
+        top: 120px;
+    }
+    
+    #info>p {
+        font-size: 30px;
+        text-align:start;
+    }
+
+    input {
+        width: 100%;
+    }
+    
+    #modal>img {
+        height: 180px;
+    }
+    
 }
 
 

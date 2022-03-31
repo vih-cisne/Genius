@@ -25,10 +25,6 @@ let circle_div = document.createElement('div')
     let middle_div = document.createElement('div')
         middle_div .id = 'middle'
     let descricao = document.createElement('p')
-        descricao.innerText ='Memorize a sequência e depois clique nas cores na mesma ordem, preparado?'
-    let btn_start = document.createElement('button')
-        btn_start.innerText = 'INICIAR'
-        btn_start.id = 'start'
     let yellow = document.createElement('div')
         yellow.id = 'yellow'
     let capitao = document.createElement('img')
@@ -41,12 +37,16 @@ let circle_div = document.createElement('div')
         rico.src = 'img/Rico.png'
         rico.alt = 'Pinguim com gravata verde'
         rico.id = 'rico'
+    let btn_start = document.createElement('button')
+        btn_start.innerText = 'INICIAR'
+        btn_start.id = 'start'
 
     blue.appendChild(recruta)
     red.appendChild(kowalski)
-    middle_div.appendChild(btn_start)
     yellow.appendChild(capitao)
     green.appendChild(rico)
+    middle_div.appendChild(descricao)
+    middle_div.appendChild(btn_start)
     circle_div.appendChild(blue)
     circle_div.appendChild(red)
     circle_div.appendChild(middle_div)
@@ -59,6 +59,14 @@ let circle_div = document.createElement('div')
 function getRandom() {
     return Math.floor(Math.random() * (4)) + 1;
 }
+
+const go=document.querySelector('#go')
+go.addEventListener('click',function() {
+    let nome=document.getElementsByTagName('input')[0]
+        descricao.innerText =`Oi,${nome.value}! Preparado(a)?`
+    const modal=document.getElementById('modal')
+    modal.style.display='none'
+})
 
 const sequence=[]
 

@@ -63,7 +63,7 @@ function getRandom() {
 const go=document.querySelector('#go')
 go.addEventListener('click',function() {
     let nome=document.getElementsByTagName('input')[0]
-        descricao.innerText =`Oi,${nome.value}! Preparado(a)?`
+        descricao.innerText =`Oi ${nome.value}! Preparado(a)?`
     const modal=document.getElementById('modal')
     modal.style.display='none'
 })

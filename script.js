@@ -63,12 +63,12 @@ function getRandom() {
 const go=document.querySelector('#go')
 go.addEventListener('click',function() {
     let nome=document.getElementsByTagName('input')[0]
-        descricao.innerText =`Oi ${nome.value}! Preparado(a)?`
+        descricao.innerText =`Vamos lá ${nome.value}! Preparado(a)?`
     const modal=document.getElementById('modal')
     modal.style.display='none'
 })
 
-const sequence=[]
+let sequence=[]
 
 function getSequence() {
     let color=getRandom()
@@ -101,7 +101,7 @@ function showSequence() {
        colorSoundEffect(sequence[i])
        i++
        if(i==sequence.length) {
-           middle.innerHTML='<p>Agora,clique nas cores na mesma ordem</p>'
+           middle.innerHTML='<p>Agora, clique nas cores na mesma ordem</p>'
            clearInterval(intervalo)
             return;
        }
@@ -170,7 +170,12 @@ circle.addEventListener('click',function(event) {
 function reloadPage() {
     const again=document.getElementById('again')
     again.addEventListener('click',function() {
-    window.location.reload()
+    sequence=[]
+    count=0
+    middle.innerHTML=''
+    middle.appendChild(descricao)
+    middle.appendChild(btn_start)
+
 }) 
 }
 

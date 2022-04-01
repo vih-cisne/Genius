@@ -153,7 +153,7 @@ circle.addEventListener('click',function(event) {
             if (pontuacao==-1) {
                 pontuacao=0
             }
-            middle.innerHTML=`<img src='img/nao_foi_dessa_vez.gif' id='gif_nao_foi'><p>Maior pontuação: ${pontuacao}</p><button id="again">Reload</button>`
+            middle.innerHTML=`<img src='img/nao_foi_dessa_vez.gif' id='gif_nao_foi'><p>Sua pontuação: ${pontuacao}</p><button id="again">Reload</button>`
             errorSoundEffect()
             reloadPage()
         }
